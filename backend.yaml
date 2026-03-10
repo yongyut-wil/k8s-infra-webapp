@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: yongyut-wil/backend-api:latest # เราจะให้ GitHub Actions มาแก้ Tag เลขเวอร์ชันตรงนี้ทีหลัง
+        image: yongyut-wil/backend-api:latest
         ports:
         - containerPort: 3000
 ---
