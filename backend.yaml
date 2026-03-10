@@ -4,6 +4,11 @@ metadata:
   name: backend
 spec:
   replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
   selector:
     matchLabels:
       app: backend
@@ -17,11 +22,24 @@ spec:
         image: yongyut-wil/backend-api:latest
         ports:
         - containerPort: 3000
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "250m"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-service
+  name: backend-svc
 spec:
   selector:
     app: backend
