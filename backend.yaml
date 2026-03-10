@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: yongyut-wil/backend-api:latest
+        image: yongyut-wil/blog-service:latest
         ports:
         - containerPort: 3000
         readinessProbe:

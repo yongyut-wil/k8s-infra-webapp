@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: yongyut-wil/frontend-app:latest
+        image: yongyut-wil/blog-app:latest
         ports:
         - containerPort: 3000
         readinessProbe:
