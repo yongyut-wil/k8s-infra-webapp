@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: ytyttyty/blog-service:latest
+        image: ytyttyty/blog-service:91880b6f087e1f09d430473af972927882c14c14
         ports:
         - containerPort: 3000
         readinessProbe:
