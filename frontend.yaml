@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ytyttyty/blog-app:c7822748330b3abb67fcf41d1413b2144b2ee12b
+        image: ytyttyty/blog-app:7c37114f5ce3e11bd08cba4d5520699f3bb2ca7d
         ports:
         - containerPort: 3000
         readinessProbe:
